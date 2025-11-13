@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abbie · Frontend Developer 個人網站</title>
-  <meta name="description" content="這是一個展示 Abbie 前端工程學習歷程、技能、作品集與聯絡方式的個人網站。網站架構採用 HTML 與 CSS，包含 Hero 區、關於我、技能、作品集與聯絡方式，之後將透過 Section SDD 替換成正式內容。">
+  <meta name="description"
+    content="這是一個展示 Abbie 前端工程學習歷程、技能、作品集與聯絡方式的個人網站。網站架構採用 HTML 與 CSS，包含 Hero 區、關於我、技能、作品集與聯絡方式，之後將透過 Section SDD 替換成正式內容。">
 
   <style>
     /* ──────────────────────────────── */
     /* CSS:BASE-START — 全站基底樣式 */
     /* ──────────────────────────────── */
 
-    *, *::before, *::after { box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
-      background-color: #0d1117; /* GitHub 風深色 */
+      background-color: #35383c;
+      /* GitHub 風深色 */
       color: #e6edf3;
       line-height: 1.8;
+      overflow-x: hidden;
     }
 
     img {
@@ -89,7 +97,8 @@
 
     .nav-right {
       display: flex;
-      gap: 1.2rem;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .nav-link {
@@ -126,9 +135,10 @@
 
     .hero-image {
       margin: 2rem auto 0;
-      max-width: 750px;
+      width: 100%;
+      max-width: 100%;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
 
     /* ──────────────────────────────── */
@@ -202,14 +212,18 @@
     /* ──────────────────────────────── */
 
     @media (min-width: 768px) {
-      .hero-title { font-size: 3rem; }
-      .section-title { font-size: 2.2rem; }
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
     }
 
     /* ──────────────────────────────── */
     /* CSS:RWD-END */
     /* ──────────────────────────────── */
-
   </style>
 </head>
 
@@ -240,9 +254,8 @@
         <p class="hero-subtext">之後會用 Section SDD 的 Prompt 產生正式的 Hero 內容，再整段取代這兩個註解中的內容。</p>
 
         <img class="hero-image"
-             src="https://cdn.pixabay.com/photo/2025/11/06/10/17/flying-9940425_1280.jpg"
-             loading="lazy"
-             alt="專注於撰寫程式碼的前端開發者示意圖">
+          src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1200&q=80"
+          loading="lazy" alt="專注於撰寫程式碼的前端開發者示意圖">
       </div>
     </section>
     <!-- SECTION:HERO-END -->
@@ -296,4 +309,5 @@
   </footer>
 
 </body>
+
 </html>
